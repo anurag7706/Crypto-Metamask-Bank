@@ -34,6 +34,9 @@ Crypto Bank is a decentralized banking platform concept designed to demonstrate 
 ## Preview:
 ![crypto bank](https://github.com/anurag7706/Crypto-Metamask-Bank/assets/75776424/f1818199-a636-4e75-8da5-985ee57aae04)
 
+## Walkover Video :
+https://www.loom.com/share/58e0ee7f7acc4bcdb77eee93b14074d6?sid=805577ac-bd4c-43a8-935b-482b942b2f0f
+
 ## Features
 
 - **Connect Your Wallet:** Simulate connecting your Ethereum wallet (e.g., MetaMask) to the application and interact with smart contracts.
