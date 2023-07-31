@@ -37,7 +37,7 @@ Crypto Bank is a decentralized banking platform concept designed to demonstrate 
 
 
 ## Walkover Video :
-https://www.loom.com/share/d1faf201725c43bbb11614c8d70b31cf?sid=e1a3eb85-6ede-4efc-848b-8c730668d6db
+https://www.loom.com/share/d1faf201725c43bbb11614c8d70b31cf?sid=7918187d-cf0a-4473-96ab-8e167080cb78
 
 ## Features
 
