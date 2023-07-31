@@ -32,8 +32,9 @@ Typically at http://localhost:3000/
 
 Crypto Bank is a decentralized banking platform concept designed to demonstrate the potential of blockchain technology in the financial sector. It provides users with a user-friendly interface to interact with Ethereum smart contracts and conduct basic banking operations on a simulated test network.
 ## Preview:
-![crypto bank](![image](https://github.com/anurag7706/Crypto-Metamask-Bank/assets/75776424/5710f5e8-110c-455c-80f2-719cf955e062)
-)
+![image](https://github.com/anurag7706/Crypto-Metamask-Bank/assets/75776424/91521b7d-419d-467c-8b6c-cf480617da75)
+
+
 
 ## Walkover Video :
 https://www.loom.com/share/58e0ee7f7acc4bcdb77eee93b14074d6?sid=805577ac-bd4c-43a8-935b-482b942b2f0f
