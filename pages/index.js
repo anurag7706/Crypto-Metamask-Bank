@@ -9,6 +9,9 @@ export default function HomePage() {
   const [bank, setBank] = useState(undefined);
   const [balance, setBalance] = useState(undefined);
   const [transactionHistory, setTransactionHistory] = useState([]);
+  const [depositAmount, setDepositAmount] = useState(1); // Default deposit amount is 1
+  const [withdrawAmount, setWithdrawAmount] = useState(1); // Default withdraw amount is 1
+  const [ethBalance, setEthBalance] = useState(undefined);
 
   const contractAddress = "0x5FbDB2315678afecb367f032d93F642f64180aa3";
   const bankABI = bank_abi.abi;
@@ -56,25 +59,27 @@ export default function HomePage() {
 
   const getBalance = async () => {
     if (bank) {
-      setBalance((await bank.getBalance()).toNumber());
+      const balanceValue = await bank.getBalance();
+      setBalance(balanceValue);
+      setEthBalance(ethers.utils.formatEther(balanceValue));
     }
   };
 
   const deposit = async () => {
     if (bank) {
-      let tx = await bank.deposit(1);
+      let tx = await bank.deposit(ethers.utils.parseEther(depositAmount.toString()));
       await tx.wait();
       getBalance();
-      addTransactionToHistory("Deposit", 1);
+      addTransactionToHistory("Deposit", depositAmount);
     }
   };
 
   const withdraw = async () => {
     if (bank) {
-      let tx = await bank.withdraw(1);
+      let tx = await bank.withdraw(ethers.utils.parseEther(withdrawAmount.toString()));
       await tx.wait();
       getBalance();
-      addTransactionToHistory("Withdraw", -1);
+      addTransactionToHistory("Withdraw", -withdrawAmount);
     }
   };
 
@@ -133,16 +138,27 @@ export default function HomePage() {
       <div className={styles.container}>
         <div className={styles.accountInfo}>
           <p className={styles.paragraph}>Your Account: {account}</p>
-          <p className={styles.paragraph}>Your Balance: {balance}</p>
+          <p className={styles.balance}>Your Balance: {ethBalance !== undefined ? `${Number(ethBalance).toFixed(2)} ETH` : "Loading..."} </p>
           <div className={styles.buttonGroup}>
+            <input
+              type="number"
+              value={depositAmount}
+              onChange={(e) => setDepositAmount(parseFloat(e.target.value))}
+              className={styles.input}
+            />
             <button onClick={deposit} className={styles.button}>
-              Deposit 1 ETH
+              Deposit ETH
             </button>
+          </div>
+          <div className={styles.buttonGroup}>
+            <input
+              type="number"
+              value={withdrawAmount}
+              onChange={(e) => setWithdrawAmount(parseFloat(e.target.value))}
+              className={styles.input}
+            />
             <button onClick={withdraw} className={styles.button}>
-              Withdraw 1 ETH
-            </button>
-            <button onClick={refreshBalance} className={styles.button}>
-              Refresh Balance
+              Withdraw ETH
             </button>
           </div>
         </div>

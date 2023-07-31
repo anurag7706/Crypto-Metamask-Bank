@@ -1,114 +1,133 @@
-/* styles.css */
+/* Common styles for all screen sizes */
 .page-wrapper {
-    height: 100vh;
-    background: linear-gradient(135deg, #800080, #800000); /* Purple to Maroon gradient */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .container {
-    max-width: 800px;
-    width: 80%;
-    padding: 30px;
-    background-color: rgba(255, 255, 255, 0.9); /* Off-white background */
-    border-radius: 20px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    color: #333; /* Dark text color */
-  }
-  
-  .history-box {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent off-white background */
-    padding: 20px;
-    border-radius: 10px;
-    margin-top: 30px;
-  }
-  
+  height: 100vh;
+  background: linear-gradient(135deg, #08e4f0, #ff0084);
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.history-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.main {
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #fff;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.input {
+  font-size: 16px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border: 2px solid #ee00ff;
+  border-radius: 5px;
+  margin-right: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.heading {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: "Arial Narrow", sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.paragraph {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.button {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border: 2px solid #ee00ff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.transactionHistory {
+  margin-top: 30px;
+}
+
+.transactionHistory-heading {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.sub-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.accountInfo {
+  margin-bottom: 20px;
+}
+
+.buttonGroup {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 767px) {
+  .container,
   .main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 40px;
-    background-color: rgba(255, 255, 255, 0.9); /* Off-white background */
-    border-radius: 30px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-    color: #333; /* Dark text color */
+    max-width: 90%; /* Adjust the width for mobile devices */
   }
-  
-  .header {
-    text-align: center;
-    margin-bottom: 30px;
+}
+
+/* Media query for desktop devices */
+@media (min-width: 768px) {
+  .main-container {
+    align-items: center; /* Center align for desktop devices */
   }
-  
-  .heading {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 20px;
-    /* Futuristic font */
-    font-family: "Oswald", sans-serif;
-    /* Add a text shadow to make the heading stand out */
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
-    color: #fff; /* White text color */
-  }
-  
-  .paragraph {
-    font-size: 20px;
-    line-height: 1.8;
-    color: #444; /* Dark text color */
-  }
-  
-  .button {
-    font-size: 20px;
-    padding: 12px 24px;
-    background-color: #800080; /* Purple background */
-    color: #fff; /* White text color */
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    margin: 10px;
-    /* Add a box shadow to make the button stand out */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .button:hover {
-    background-color: #800000; /* Slightly darker purple background on hover */
-  }
-  
-  .list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .list-item {
-    font-size: 18px;
-    margin-bottom: 8px;
-  }
-  
-  .transactionHistory {
-    margin-top: 50px;
-  }
-  
-  .transactionHistory-heading {
-    font-size: 32px;
-    margin-bottom: 20px;
-  }
-  
-  .sub-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .accountInfo {
-    margin-bottom: 30px;
-  }
-  
-  .buttonGroup {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
-  }
+}
